@@ -212,6 +212,9 @@ X_test <- subset(X_test, select=-(Product_ID))
 ```{r}
 X_train%>% names()
 X_test %>% names()
+X_train[is.na(X_train)] <- 999
+X_test[is.na(X_test)] <- 999
+
 ```
 
 
